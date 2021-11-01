@@ -61,7 +61,7 @@ public class CSVWriterFiles {
                     .replace("[", "")
                     .replace("]","")));
             bw.close();
-        }else {
+        }else{
             Writer writer = Files.newBufferedWriter(Paths.get("pokemons.csv"));
             writer.append("\"Nome\", \"Tipo\", \"Ataque\", \"Dano\", \"Resistencia\"\n");
             StatefulBeanToCsvBuilder<Pokemon> beanToCsv = new StatefulBeanToCsvBuilder<>(writer);
